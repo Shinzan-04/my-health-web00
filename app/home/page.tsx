@@ -8,7 +8,7 @@ export default function HomePage() {
       <Navigation />
       <div className="flex flex-1 items-center justify-center">
         <h1 className="text-3xl font-bold text-blue-700">
-          Chào mừng bạn đến với trang chủ! 
+          Chào mừng bạn đến với trang chủ! cccc
         </h1>
       </div>
     </div>
