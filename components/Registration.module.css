@@ -1,0 +1,79 @@
+.registration {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Giới hạn tối đa để không quá rộng trên màn hình lớn */
+  margin: 0 auto; /* Căn giữa nếu cần */
+}
+
+.instructions {
+  flex: 1;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.formContainer {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #007aff;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 500px; /* Giới hạn form để không quá rộng */
+}
+
+.formContainer h2 {
+  font-size: 24px;
+  color: #007aff;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formGroup textarea {
+  height: 100px;
+}
+
+.submitButton {
+  padding: 10px 20px;
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}

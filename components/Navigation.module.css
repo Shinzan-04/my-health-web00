@@ -1,0 +1,98 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px; /* tăng padding header */
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0; /* tăng 1 lần */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* tăng 1 lần */
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px; /* tăng 1 lần */
+  height: auto;
+  margin-right: 10px; /* tăng 1 lần */
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px; /* tăng 1 lần */
+  color: rgba(135, 159, 197, 0.92);
+  margin: 0;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* tăng 1 lần */
+}
+
+.searchInput {
+  padding: 5px 10px; /* tăng 1 lần */
+  border: 1px solid #ccc; /* tăng 1 lần */
+  border-radius: 4px; /* tăng 1 lần */
+  margin-right: 10px; /* tăng 1 lần */
+  width: 200px; /* tăng 1 lần */
+  font-size: 16px; /* tăng 1 lần */
+}
+
+.searchButton {
+  padding: 5px 15px; /* tăng 1 lần */
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 4px; /* tăng 1 lần */
+  cursor: pointer;
+  font-size: 16px; /* tăng 1 lần */
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* tăng 1 lần */
+}
+
+.link {
+  margin-left: 20px; /* tăng 1 lần */
+  color: #27509f;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; /* tăng 1 lần */
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.registerButton {
+  padding: 5px 15px; /* tăng 1 lần */
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 4px; /* tăng 1 lần */
+  cursor: pointer;
+  margin-right: 10px; /* tăng 1 lần */
+  font-size: 16px; /* tăng 1 lần */
+}
+
+.loginButton {
+  padding: 5px 15px; /* tăng 1 lần */
+  background-color: #8bd7f9;
+  color: #fff;
+  border: none;
+  border-radius: 4px; /* tăng 1 lần */
+  cursor: pointer;
+  font-size: 16px; /* tăng 1 lần */
+}
