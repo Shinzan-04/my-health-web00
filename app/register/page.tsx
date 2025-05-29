@@ -10,20 +10,53 @@ export default function RegisterPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!fullname || !contact || !password || !confirmPassword) {
-      setError("Vui lòng nhập đầy đủ thông tin");
-      return;
-    }
-    if (password !== confirmPassword) {
-      setError("Mật khẩu xác nhận không khớp");
-      return;
-    }
-    setError("");
-    alert(`Đăng ký thành công cho: ${fullname}`);
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!fullname || !contact || !password || !confirmPassword) {
+    setError("Vui lòng nhập đầy đủ thông tin");
+    return;
+  }
+  if (password !== confirmPassword) {
+    setError("Mật khẩu xác nhận không khớp");
+    return;
+  }
+
+  const payload = {
+    fullName: fullname,
+    password: password,
+    email: contact.includes("@") ? contact : null,
+    phone: contact.includes("@") ? null : contact,
+    gender: "MALE", // hoặc cho người dùng chọn
+    role: "CUSTOMER" // hoặc "ADMIN" tùy form
   };
 
+  try {
+    const res = await fetch("http://localhost:8080/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!res.ok) {
+      const errData = await res.json();
+      setError(errData.message || "Đăng ký thất bại");
+      return;
+    }
+
+    const result = await res.json();
+    alert("Đăng ký thành công!");
+    console.log(result);
+    // Chuyển hướng sang trang login:
+    window.location.href = "/login";
+
+  } catch (err) {
+    setError("Lỗi kết nối máy chủ");
+    console.error(err);
+  }
+};
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-300">
       <div className="bg-white shadow-xl rounded-xl px-8 py-10 w-full max-w-md relative">
