@@ -28,9 +28,18 @@ export const Navigation = () => {
           >
             Trang chủ
           </a>
-          <a href="#" className={styles.link}>Đặt lịch</a>
+          <a href="#" className={styles.link}>Đặt lịch</a> 
           <a href="#" className={styles.link}>Tài liệu giáo dục</a>
-          <a href="#" className={styles.link}>Blog</a>
+          <a
+              href="/blog"
+              className={styles.link}
+              onClick={e => {
+                e.preventDefault();
+                router.push('/blog');
+              }}
+            >
+              Blog
+          </a>
         </div>
         <div className={styles.buttons}>
           <button
